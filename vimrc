@@ -1,3 +1,8 @@
+" Pathogen specific calls
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+
 " Tab settings
 set tabstop=4
 set shiftwidth=4 
@@ -59,8 +64,7 @@ nnoremap k gk
 
 " Misc key mappings
 nnoremap ; :
-nnoremap , <leader>
-
+let mapleader = ","
 " Remove vi functionality
 set nocompatible
 
@@ -74,11 +78,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Pathogen specific calls
-call pathogen#infect()
-syntax on
-filetype plugin indent on
-
 " Colors
 colorscheme peaksea
 
+" NERDCommenter config
+let NERDShutUp=1
+
+" CtrlP config
+let g:ctrlp_map = ''
+nnoremap <leader>pp :CtrlP<cr>
+nnoremap <leader>pb :CtrlPBuffer<cr>
+nnoremap <leader>pm :CtrlPMRU<cr>
+let g:ctrlp_root_markers = ['Makefile']
+let g:ctrlp_working_path_mode = 'r'
