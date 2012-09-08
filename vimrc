@@ -40,15 +40,11 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 " Longer line settings
-set wrap
-set textwidth=79
+" set wrap
+set textwidth=110
+let &wrapmargin=&textwidth
 set formatoptions=qrn1
-set colorcolumn=85
-
-" Show invisible characters
-set list
-nmap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
+let &colorcolumn=&textwidth
 
 " Disable arrow keys :(
 nnoremap <up> <nop>
@@ -78,8 +74,21 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Show invisible characters
+set list
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
 " Colors
+set t_Co=256
+set background=light
 colorscheme peaksea
+highlight NonText None
+highlight NonText ctermfg=grey
+highlight NonText guifg=grey
+highlight SpecialKey None
+highlight SpecialKey ctermfg=grey
+highlight SpecialKey guifg=grey
 
 " NERDCommenter config
 let NERDShutUp=1
