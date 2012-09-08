@@ -100,3 +100,9 @@ nnoremap <leader>pb :CtrlPBuffer<cr>
 nnoremap <leader>pm :CtrlPMRU<cr>
 let g:ctrlp_root_markers = ['Makefile']
 let g:ctrlp_working_path_mode = 'r'
+
+" Language specific settings
+augroup golang
+    au!
+    au FileType go set noexpandtab
+augroup END
