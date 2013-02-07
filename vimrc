@@ -63,6 +63,7 @@ nnoremap ; :
 let mapleader = ","
 " Remove vi functionality
 set nocompatible
+nnoremap <space> :call NERDComment("n","toggle")<cr>
 
 " Disable modelines
 " set modelines
