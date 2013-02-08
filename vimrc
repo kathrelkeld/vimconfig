@@ -9,6 +9,9 @@ set shiftwidth=4
 set softtabstop =4
 set expandtab
 
+" Default window size
+set lines=50 columns=113
+
 " General settings
 set encoding=utf-8
 set scrolloff=5                 " Lines to show above/below current
