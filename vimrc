@@ -10,7 +10,7 @@ set softtabstop =4
 set expandtab
 
 " Default window size
-set lines=50 columns=113
+set lines=50 columns=93
 
 " General settings
 set encoding=utf-8
@@ -44,7 +44,7 @@ vnoremap <tab> %
 
 " Longer line settings
 " set wrap
-set textwidth=110
+set textwidth=100
 let &wrapmargin=&textwidth
 set formatoptions=qrn1
 let &colorcolumn=&textwidth
@@ -61,11 +61,12 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Remove vi functionality
+set nocompatible
+
 " Misc key mappings
 nnoremap ; :
 let mapleader = ","
-" Remove vi functionality
-set nocompatible
 nnoremap <space> :call NERDComment("n","toggle")<cr>
 
 " Disable modelines
